@@ -7,10 +7,14 @@ A ação visa fornecer uma presença digital para uma escola/grupo de dança, fa
 
 ## 🌍 Objetivos de Desenvolvimento Sustentável (ODS)
 O projeto está alinhado com as metas da Agenda 2030 da ONU:
-* **ODS 4 - Educação de Qualidade:** Promover o acesso a informações culturais e facilitar a aprendizagem da arte da dança.
-* **ODS 8 - Trabalho Decente e Crescimento Econômico:** Apoiar a profissionalização de grupos culturais, auxiliando na geração de renda e visibilidade local.
-* **ODS 11 - Cidades e Comunidades Sustentáveis (Meta 11.4):** Fortalecer os esforços para salvaguardar o patrimônio cultural local.
+- **ODS 8: Trabalho Decente e Crescimento Econômico**
+  - > Apoiar a profissionalização de grupos culturais, auxiliando na geração de renda e visibilidade local.
 
+- **ODS 9: Indústria, Inovação e Infraestrutura (Meta 9.c)**
+  - > Fortalecer o acesso às tecnologias de informação e comunicação, promovendo a transformação digital de iniciativas locais.
+
+- **ODS 11: Cidades e Comunidades Sustentáveis (Meta 11.4)**
+  - > Fortalecer os esforços para proteger e salvaguardar o patrimônio cultural local.
 ---
 
 ## Roadmap: Lista de Tarefas 
@@ -35,8 +39,8 @@ O projeto está alinhado com as metas da Agenda 2030 da ONU:
 ### Fase 4: Implantação e Finalização
 - [x] Configuração do repositório no GitHub.
 - [x] Ativação do **GitHub Pages** nas configurações do projeto.
-- [ ] Teste de performance e acessibilidade.
-- [ ] Coleta do depoimento da instituição para o relatório final.
+- [x] Teste de performance e acessibilidade.
+- [x] Coleta do depoimento da instituição para o relatório final.
 
 ---
 

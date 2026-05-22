@@ -5,16 +5,14 @@ class MobileNavbar {
         this.navLinks = document.querySelectorAll(navLinks);
         this.activeClass = "active";
         this.handleClick = this.handleClick.bind(this);
+        this.closeMenu = this.closeMenu.bind(this);
     }
 
     animateLinks() {
-        this.navLinks.forEach((link, index) => {
-            link.style.animation
-                ? (link.style.animation = "")
-                : (link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3
-                    }s`);
-        });
-    }
+    this.navLinks.forEach((link, index) => {
+        link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`;
+    });
+}
 
     handleClick() {
         this.navList.classList.toggle(this.activeClass);
@@ -22,8 +20,20 @@ class MobileNavbar {
         this.animateLinks();
     }
 
+    closeMenu() {
+    this.navList.classList.remove(this.activeClass);
+    this.mobileMenu.classList.remove(this.activeClass);
+    this.navLinks.forEach(link => {
+        link.style.animation = "";
+    });
+}
+
     addClickEvent() {
         this.mobileMenu.addEventListener("click", this.handleClick);
+
+        document.querySelectorAll('.nav-list a').forEach(link => {
+            link.addEventListener("click", this.closeMenu);
+        });
     }
 
     init() {
@@ -99,13 +109,13 @@ radios.forEach((radio, index) => {
 });
 
 
-setInterval( function(){
+setInterval(function () {
     nextImage()
 }, 5000)
 
-function nextImage(){
+function nextImage() {
     count++;
-     if (count > radios.length) {
+    if (count > radios.length) {
         count = 1;
     }
 
@@ -118,12 +128,12 @@ const thumbnails = document.querySelectorAll(".thumbnails img");
 
 thumbnails.forEach((thumb) => {
     thumb.addEventListener("click", () => {
-         thumbnails.forEach((img) => {
+        thumbnails.forEach((img) => {
             img.classList.remove("active");
         });
 
         thumb.classList.add("active");
-        
+
         currentImage.src = thumb.src;
     });
 });

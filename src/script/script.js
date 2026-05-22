@@ -60,12 +60,8 @@ function matriculaWhatsApp(event) {
 
     const name = document.querySelector('#name').value;
     const danceStyle = document.querySelector('#modalidade').value;
-    const experienceLevel = document.querySelector('#experience').value;
+    const experienceLevel = document.querySelector('#experiencia').value;
 
-    /*
-        const faixaEtaria = document.querySelector('#faixa-etaria').value;
-        `*Perfil:* ${faixaEtaria}\n` +
-    */
 
     const message = `Olá! Meu nome é *${name}* e tenho interesse em me matricular na escola.\n\n` +
         `*Modalidade:* ${danceStyle}\n` +

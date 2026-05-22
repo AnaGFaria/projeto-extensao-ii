@@ -9,10 +9,10 @@ class MobileNavbar {
     }
 
     animateLinks() {
-    this.navLinks.forEach((link, index) => {
-        link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`;
-    });
-}
+        this.navLinks.forEach((link, index) => {
+            link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`;
+        });
+    }
 
     handleClick() {
         this.navList.classList.toggle(this.activeClass);
@@ -21,12 +21,12 @@ class MobileNavbar {
     }
 
     closeMenu() {
-    this.navList.classList.remove(this.activeClass);
-    this.mobileMenu.classList.remove(this.activeClass);
-    this.navLinks.forEach(link => {
-        link.style.animation = "";
-    });
-}
+        this.navList.classList.remove(this.activeClass);
+        this.mobileMenu.classList.remove(this.activeClass);
+        this.navLinks.forEach(link => {
+            link.style.animation = "";
+        });
+    }
 
     addClickEvent() {
         this.mobileMenu.addEventListener("click", this.handleClick);
@@ -53,38 +53,36 @@ const mobileNavbar = new MobileNavbar(
 
 mobileNavbar.init();
 
+const telefone = "5534996427075";
 
-
-function enviarWhatsApp(event) {
+function matriculaWhatsApp(event) {
     event.preventDefault();
-    const testeONLY = "5534997645824";
-
-    alert("to usando meu número no periodo de testes, ao finalizar remover esse alert e colocar o número da academia");
 
     const name = document.querySelector('#name').value;
     const danceStyle = document.querySelector('#modalidade').value;
+    const experienceLevel = document.querySelector('#experience').value;
 
-    console.log(name, danceStyle);
+    /*
+        const faixaEtaria = document.querySelector('#faixa-etaria').value;
+        `*Perfil:* ${faixaEtaria}\n` +
+    */
 
-    const telefone = testeONLY;
+    const message = `Olá! Meu nome é *${name}* e tenho interesse em me matricular na escola.\n\n` +
+        `*Modalidade:* ${danceStyle}\n` +
+        `*Minha experiência:* ${experienceLevel}\n\n` +
+        `Gostaria de saber mais sobre os horários disponíveis e valores. Como posso fazer?`;
 
-
-    const mensagem = `Olá! Meu nome é ${name} e tenho interesse na aula de ${danceStyle}.`;
-    const url = `https://wa.me/${telefone}?text=${encodeURIComponent(mensagem)}`;
+    const url = `https://wa.me/${telefone}?text=${encodeURIComponent(message)}`;
 
     window.open(url, '_blank');
 }
 
-function contatoViaWpp(event) {
+function contatoWhatsApp(event) {
     event.preventDefault();
-    const testeONLY = "5534997645824";
-
-    alert("to usando meu número no periodo de testes, ao finalizar remover esse alert e colocar o número da academia");
 
     const name = document.querySelector('#name').value;
     let subject = document.querySelector('#subject').value;
     const message = document.querySelector('#message').value;
-    const telefone = testeONLY;
 
     if (subject) {
         subject = 'e tenho uma ' + subject;

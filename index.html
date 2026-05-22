@@ -17,7 +17,11 @@
 <body>
     <header>
         <nav>
-            <img class="logo" src="src/img/white-logo-bold.svg" alt="logo" width="120" height="120" />
+            <div class="nav-logo">
+                <a href="index.html">
+                    <img src="src/img/white-logo-bold.svg" alt="Alex Academia de Dança">
+                </a>
+            </div>
             <button class="mobile-menu" aria-label="Abrir menu">
                 <i class="fa-solid fa-bars"></i>
             </button>
@@ -34,9 +38,9 @@
 
     <main>
         <section id="inicio" class="hero">
-            <h1>Alex Academia de Dança</h1>
-            <p>Promovendo a cultura e a expressão artística através da dança. Um projeto de difusão cultural para nossa
-                comunidade em Uberlândia.</p>
+            <h1>Descubra a Arte do Movimento</h1>
+            <p>Referência no ensino da dança em Uberlândia. Há mais de 30 anos transformando vidas, ritmo e expressão
+                através do Ballet Clássico, Jazz Dance e Contemporâneo.</p>
 
             <a href="#matricula" class="btn btn-primary">Agende uma Aula</a>
         </section>
@@ -58,7 +62,7 @@
                 </div>
             </div>
         </section>
-        
+
         <section id="sobre">
 
             <h2 class="section-title">Nossa Missão Cultural</h2>
@@ -98,7 +102,7 @@
                         <div class="slide">
                             <img src="./src/img/image_(8).jpg" alt="image 8">
                         </div>
-                        
+
                         <div class="navigation-auto">
                             <div class="auto-btn1"></div>
                             <div class="auto-btn2"></div>
@@ -123,15 +127,15 @@
                     </div>
                 </div>
                 <div>
-                    <p>Somos uma academia de dança dedicada a promover a cultura e a expressão artística através da
-                        dança.</p>
-                    <br>
-                    <p>Apoiamos a profissionalização de artistas e a democratização do acesso às artes em nossa região.
-                    </p>
+                    <p>Somos um espaço dedicado a promover a cultura e a expressão corporal, transformando vidas através
+                        da arte do movimento.</p>
+                    <br />
+                    <p>Nosso compromisso é com a profissionalização de talentos locais e a democratização do acesso às
+                        artes em nossa região.</p>
                 </div>
             </div>
         </section>
-        
+
         <section id="galeria">
 
             <h2 class="section-title">Galeria de Imagens</h2>
@@ -139,7 +143,7 @@
                 <div class="main-image">
                     <img id="current-image" src="./src/img/image_(9).webp" alt="image 9">
                 </div>
-                
+
                 <div class="thumbnails">
                     <img src="./src/img/image_(9).webp" alt="image 9">
                     <img src="./src/img/image_(10).jpg" alt="image 10">
@@ -154,18 +158,12 @@
         </section>
 
         <section id="matricula">
-            <h2 class="section-title">Pré Matricula</h2>
+            <h2 class="section-title">Garantir Minha Vaga</h2>
             <div class="section-container">
-                <div class="schedule-info">
-                    <h3>Grade de Aulas</h3>
-                    <ul>
-                        <em>// exemplo de preenchimento</em>
-                        <li>Segunda-feira - 18:00 às 19:30</li>
-                        <li>Terça-feira - 18:00 às 19:30</li>
-                        <li>Quarta-feira - 18:00 às 19:30</li>
-                        <li>Quinta-feira - 18:00 às 19:30</li>
-                        <li>Sexta-feira - 18:00 às 19:30</li>
-                    </ul>
+                <div class="classes-info">
+                    <h3>Pré-Matrícula</h3>
+                    <p>Formamos turmas para todas as idades: crianças, jovens e adultos são bem-vindos!</p>
+                    <em>Aulas de segunda a sábado</em>
                 </div>
                 <form id="matriculaForm" onsubmit="enviarWhatsApp(event)">
                     <div class="form-group">
@@ -180,6 +178,16 @@
                             <option value="Ballet Clássico">Ballet Clássico</option>
                             <option value="Jazz Dance">Jazz Dance</option>
                             <option value="Contemporâneo">Contemporâneo</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Minha experiência:</label>
+                        <select id="experiencia" required>
+                            <option value="">Selecione uma opção...</option>
+
+                            <option value="Iniciante">Iniciante</option>
+                            <option value="Intermediário">Intermediário</option>
+                            <option value="Avançado">Avançado</option>
                         </select>
                     </div>
 
